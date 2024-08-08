@@ -17,11 +17,19 @@ body{
   width: 100px;
   /* background-image: linear-gradient(to right, blue, purple); */
   background-image: url(Card\ 12.png);
+  /* background-color: white; */
   background-repeat: no-repeat;
   border-radius: 10px;
   margin: 5px;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #pop, #back{
+  padding: 10px 30px;
   display:none;
   width: 700px;
   height: 400px;

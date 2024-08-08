@@ -2,7 +2,10 @@ const pop = document.getElementById('pop')
 const key = document.getElementById('key')
 const back = document.getElementById('back')
 const back_num = document.getElementById('back_num')
+const ans = document.getElementById('ans');
+const numb = document.getElementById('numb');
 let no= 6;
+let ind = 1;
 const id = [];
 for (let i = 1; i <= 75; i++) {
     const element = document.getElementById(`btn${i}`);
@@ -12,7 +15,10 @@ const popup = (keyword,num,i)=>{
     no = num;
     pop.style.display = 'flex';
     key.innerText = keyword;
-    id[i].style.backgroundColor = 'green';
+    ans.innerText = num;
+    ind = i;
+    
+
 
     // pop.innerHTML = <h1>${keyword}</h1>
 
@@ -24,7 +30,10 @@ const number = ()=>{
 
 
 }
-const closepop = ()=>{
+const closepop = (number)=>{
     back.style.display = 'none';
     pop.style.display = 'none';
+    const num = numb.value;
+    console.log(num);
+    id[ind].innerHTML =`<h1>${num}</h1>` ;
 }
