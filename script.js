@@ -11,17 +11,12 @@ for (let i = 1; i <= 75; i++) {
     const element = document.getElementById(`btn${i}`);
     id[i-1] = element;
 }
-const popup = (keyword,num,i)=>{
-    no = num;
+const popup = (keyword,missing,answer,i)=>{
+    no = answer;
     pop.style.display = 'flex';
     key.innerText = keyword;
-    ans.innerText = num;
+    ans.innerText = missing;
     ind = i;
-    
-
-
-    // pop.innerHTML = <h1>${keyword}</h1>
-
 }
 const number = ()=>{
     pop.style.display = 'none';

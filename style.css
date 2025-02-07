@@ -1,60 +1,242 @@
-body{
+:root {
+  --card-height: 100px;
+  --card-width: 110px;
+  --card-border-radius: 10px;
+  --background-cover: cover;
+  --background-no-repeat: no-repeat;
+}
+
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(sky.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("/assests/tug_of_war\ 2.svg");
+  background-repeat: var(--background-no-repeat);
+  background-size: var(--background-cover);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-#navbar{
+
+#navbar {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.btn{
-  height: 100px;
-  width: 100px;
-  /* background-image: linear-gradient(to right, blue, purple); */
-  background-image: url(Card\ 12.png);
-  /* background-color: white; */
-  background-repeat: no-repeat;
-  border-radius: 10px;
+
+.btn {
+  height: var(--card-height);
+  width: var(--card-width);
+  background-image: url("/assests/Card\ 12.png");
+  background-repeat: var(--background-no-repeat);
+  border-radius: var(--card-border-radius);
   margin: 5px;
-  color: black;
-  font-size: 40px;
+  color: white;
+  font-size: 35px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#pop, #back{
+
+#pop, #back {
   padding: 10px 30px;
-  display:none;
+  display: none;
   width: 700px;
   height: 400px;
-  background-image: url(pop\ up.png);
-  background-size: cover;
-  /* backdrop-filter: blur(10px); */
+  background-image: url("/assests/pop\ up.png");
+  background-size: var(--background-cover);
   color: white;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform:translate(-50%,-50%);
-  /* display: flex; */
+  transform: translate(-50%, -50%);
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--card-border-radius);
   z-index: 1000;
-  box-shadow: 0 0 5px 0;
-  background:transparent;
+  background: transparent;
   backdrop-filter: blur(20px);
-  
-
 }
-#back{
-  display: none;
+
+.container {
+  display: flex;
+  height: var(--card-height);
+  width: var(--card-width);
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  margin: 9px 12px;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(360deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.btn, .back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.back {
+  border-radius: 2rem;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.back[id^="back"] {
+  height: 110px;
+  width: 120px;
+  background-size: var(--background-cover);
+  background-repeat: var(--background-no-repeat);
+}
+
+
+#back1 { background-image: url("/assests/one.jpg"); }
+#back2 { background-image: url("/assests/two.jpg"); }
+#back3{background-image: url("/assests/three.jpg");}
+#back4{background-image: url("/assests/four.jpg");}
+#back5{background-image: url("/assests/five.jpg");}
+#back6{background-image: url("/assests/six.jpg");}
+#back7{background-image: url("/assests/seven.jpg");}
+#back8{background-image: url("/assests/eight.jpg");}
+#back9{background-image: url("/assests/nine.jpg");}
+#back10{background-image: url("/assests/ten.jpg");}
+
+#back11 { background-image: url("/assests/11.jpg"); }
+#back12 { background-image: url("/assests/12.jpg"); }
+#back13{background-image: url("/assests/13.jpg");}
+#back14{background-image: url("/assests/14.jpg");}
+#back15{background-image: url("/assests/15.jpg");}
+#back16{background-image: url("/assests/16.jpg");}
+#back17{background-image: url("/assests/17.jpg");}
+#back18{background-image: url("/assests/18.jpg");}
+#back19{background-image: url("/assests/19.jpg");}
+#back20{background-image: url("/assests/20.jpg");}
+
+#back21 { background-image: url("/assests/21.jpg"); }
+#back22 { background-image: url("/assests/22.jpg"); }
+#back23{background-image: url("/assests/23.jpg");}
+#back24{background-image: url("/assests/24.jpg");}
+#back25{background-image: url("/assests/25.jpg");}
+#back26{background-image: url("/assests/26.jpg");}
+#back27{background-image: url("/assests/27.jpg");}
+#back28{background-image: url("/assests/28.jpg");}
+#back29{background-image: url("/assests/29.jpg");}
+#back30{background-image: url("/assests/30.jpg");}
+
+#back31 { background-image: url("/assests/31.jpg"); }
+#back32 { background-image: url("/assests/32.jpg"); }
+#back33{background-image: url("/assests/33.jpg");}
+#back34{background-image: url("/assests/34.jpg");}
+#back35{background-image: url("/assests/35.jpg");}
+#back36{background-image: url("/assests/36.jpg");}
+#back37{background-image: url("/assests/37.jpg");}
+#back38{background-image: url("/assests/38.jpg");}
+#back39{background-image: url("/assests/39.jpg");}
+#back400{background-image: url("/assests/40.jpg");}
+
+#back41 { background-image: url("/assests/41.jpg"); }
+#back42 { background-image: url("/assests/42.jpg"); }
+#back43{background-image: url("/assests/43.jpg");}
+#back44{background-image: url("/assests/44.jpg");}
+#back45{background-image: url("/assests/45.jpg");}
+#back46{background-image: url("/assests/46.jpg");}
+#back47{background-image: url("/assests/47.jpg");}
+#back48{background-image: url("/assests/48.jpg");}
+#back49{background-image: url("/assests/49.jpg");}
+#back50{background-image: url("/assests/50.jpg");}
+
+#back51 { background-image: url("/assests/51.png"); }
+#back52 { background-image: url("/assests/52.png"); }
+#back53{background-image: url("/assests/53.png");}
+#back54{background-image: url("/assests/54.png");}
+#back55{background-image: url("/assests/55.png");}
+#back56{background-image: url("/assests/56.png");}
+#back57{background-image: url("/assests/57.png");}
+#back58{background-image: url("/assests/58.png");}
+#back59{background-image: url("/assests/59.png");}
+#back60{background-image: url("/assests/60.png");}
+
+#back61 { background-image: url("/assests/61.png"); }
+#back62 { background-image: url("/assests/62.png"); }
+#back63{background-image: url("/assests/63.png");}
+#back64{background-image: url("/assests/64.png");}
+#back65{background-image: url("/assests/65.png");}
+#back66{background-image: url("/assests/66.png");}
+#back67{background-image: url("/assests/67.png");}
+#back68{background-image: url("/assests/68.png");}
+#back69{background-image: url("/assests/69.png");}
+#back70{background-image: url("/assests/70.png");}
+
+#back71 { background-image: url("/assests/71.png"); }
+#back72 { background-image: url("/assests/72.png"); }
+#back73{background-image: url("/assests/73.png");}
+#back74{background-image: url("/assests/74.png");}
+#back75{background-image: url("/assests/75.png");}
+#back76{background-image: url("/assests/76.png");}
+#back77{background-image: url("/assests/77.png");}
+#back78{background-image: url("/assests/78.png");}
+#back79{background-image: url("/assests/79.png");}
+#back80{background-image: url("/assests/80.png");}
+
+#back81 { background-image: url("/assests/81.png"); }
+#back82 { background-image: url("/assests/82.png"); }
+#back83{background-image: url("/assests/83.png");}
+#back84{background-image: url("/assests/84.png");}
+#back85{background-image: url("/assests/85.png");}
+#back86{background-image: url("/assests/86.png");}
+#back87{background-image: url("/assests/87.png");}
+#back88{background-image: url("/assests/88.png");}
+#back89{background-image: url("/assests/89.png");}
+#back90{background-image: url("/assests/90.png");}
+
+#back91 { background-image: url("/assests/91.png"); }
+#back92 { background-image: url("/assests/92.png"); }
+#back93{background-image: url("/assests/93.png");}
+#back94{background-image: url("/assests/94.png");}
+#back95{background-image: url("/assests/95.png");}
+#back96{background-image: url("/assests/96.png");}
+#back97{background-image: url("/assests/97.png");}
+#back98{background-image: url("/assests/98.png");}
+#back99{background-image: url("/assests/99.png");}
+#back100{background-image: url("/assests/100.png");}
+
+
+
+
+@media screen and (max-width: 596px) {
+  #pcs_logo {
+    display: none;
+  }
+  #teckbuzz {
+    margin: auto;
+  }
+}
+
+/* Additional form element styles */
+#click, #numb {
+  height: 40px;
+  border-radius: var(--card-border-radius);
+  border: none;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 10px;
 }
